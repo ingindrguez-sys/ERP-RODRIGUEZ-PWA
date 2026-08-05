@@ -1,0 +1,44 @@
+ERP RODRÍGUEZ PWA v1.1
+
+1. DESCOMPRIME EL ZIP.
+2. ABRE LA CARPETA ERP_Rodriguez_PWA_v1_1.
+3. PRESIONA Ctrl + A.
+4. EN GITHUB:
+   Add file > Upload files.
+5. ARRASTRA LOS 12 ELEMENTOS PRINCIPALES:
+   app
+   components
+   lib
+   public
+   .env.local.example
+   .gitignore
+   INSTRUCCIONES_PASO_A_PASO.txt
+   LISTA_DE_ARCHIVOS.txt
+   next-env.d.ts
+   next.config.ts
+   package.json
+   README.md
+   tsconfig.json
+
+NOTA:
+Puede aparecer un elemento más porque están README e instrucciones.
+Eso es correcto.
+
+6. EN LA RAÍZ DEL REPOSITORIO DEBEN VERSE:
+   app
+   components
+   lib
+   public
+   package.json
+   next.config.ts
+   tsconfig.json
+
+7. HAZ COMMIT CHANGES.
+
+8. DESPUÉS IREMOS A VERCEL.
+
+IMPORTANTE:
+- manifest.webmanifest está dentro de public.
+- sw.js está dentro de public.
+- globals.css está dentro de app.
+- En Next.js NO se necesita app.js.

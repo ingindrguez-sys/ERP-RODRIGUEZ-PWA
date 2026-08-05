@@ -1,0 +1,22 @@
+{
+  "name": "ERP Rodríguez — Sistema de Ventas",
+  "short_name": "ERP Rodríguez",
+  "description": "Centro de Control Empresarial de Grupo Comercial Rodríguez",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#fff8f3",
+  "theme_color": "#7b1118",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
