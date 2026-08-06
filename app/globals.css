@@ -293,6 +293,71 @@ tr:hover td { background: #fffaf7; }
   .metrics,
   .settings-grid,
   .form-grid { grid-template-columns: 1fr; }
+  
+ } /* CORRECCIÓN DEL MENÚ PARA IPHONE Y SAFARI */
+  
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 16px;
+    padding-bottom: calc(125px + env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    width: auto;
+    min-height: 66px;
+    padding: 8px 5px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .bottom-nav a {
+    min-width: 54px;
+    padding: 5px 3px;
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .bottom-nav small {
+    display: block;
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .bottom-nav a.active {
+    color: var(--wine);
+    font-weight: 700;
+  }
+}
+
+/* Cuando se instale como aplicación PWA */
+@media (display-mode: standalone) and (max-width: 900px) {
+  .bottom-nav {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+
+  .main {
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+}
 
   .welcome { align-items: flex-start; }
   .welcome img { width: 85px; }
