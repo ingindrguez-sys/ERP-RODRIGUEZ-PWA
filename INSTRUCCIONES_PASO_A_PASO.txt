@@ -1,44 +1,22 @@
-ERP RODRÍGUEZ PWA v1.1
+ERP RODRÍGUEZ PWA v1.1.1 — CORRECCIÓN DE INICIO
 
-1. DESCOMPRIME EL ZIP.
-2. ABRE LA CARPETA ERP_Rodriguez_PWA_v1_1.
-3. PRESIONA Ctrl + A.
-4. EN GITHUB:
-   Add file > Upload files.
-5. ARRASTRA LOS 12 ELEMENTOS PRINCIPALES:
-   app
-   components
-   lib
-   public
-   .env.local.example
-   .gitignore
-   INSTRUCCIONES_PASO_A_PASO.txt
-   LISTA_DE_ARCHIVOS.txt
-   next-env.d.ts
-   next.config.ts
-   package.json
-   README.md
-   tsconfig.json
+REEMPLAZAR EN GITHUB:
+1. public/sw.js
+2. lib/supabase.ts
+3. components/AuthGate.tsx
 
-NOTA:
-Puede aparecer un elemento más porque están README e instrucciones.
-Eso es correcto.
+Después:
+1. Haz Commit changes.
+2. Vercel creará automáticamente un nuevo despliegue.
+3. Espera a que marque Ready.
+4. En el iPhone:
+   Ajustes > Safari > Avanzado > Datos de sitios web
+   Busca vercel.app o erp-rodriguez-pwa.vercel.app
+   Elimina esos datos.
+5. Abre de nuevo:
+   https://erp-rodriguez-pwa.vercel.app
 
-6. EN LA RAÍZ DEL REPOSITORIO DEBEN VERSE:
-   app
-   components
-   lib
-   public
-   package.json
-   next.config.ts
-   tsconfig.json
-
-7. HAZ COMMIT CHANGES.
-
-8. DESPUÉS IREMOS A VERCEL.
-
-IMPORTANTE:
-- manifest.webmanifest está dentro de public.
-- sw.js está dentro de public.
-- globals.css está dentro de app.
-- En Next.js NO se necesita app.js.
+Esta corrección:
+- Evita almacenar archivos viejos de Next.js.
+- Acepta la Publishable Key actual de Supabase.
+- Muestra un mensaje entendible si falta configuración.
