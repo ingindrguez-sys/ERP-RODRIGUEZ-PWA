@@ -6,10 +6,14 @@ export function getSupabase(): SupabaseClient {
   if (client) return client;
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  const key =
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !key) {
-    throw new Error("Faltan las variables públicas de Supabase en Vercel.");
+    throw new Error(
+      "Faltan NEXT_PUBLIC_SUPABASE_URL y NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY en Vercel."
+    );
   }
 
   client = createClient(url, key, {
@@ -17,7 +21,7 @@ export function getSupabase(): SupabaseClient {
       persistSession: true,
       autoRefreshToken: true,
       detectSessionInUrl: true,
-      storageKey: "erp-rodriguez-auth-v1",
+      storageKey: "erp-rodriguez-auth-v1-1-1",
     },
   });
 
